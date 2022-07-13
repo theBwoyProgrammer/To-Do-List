@@ -1,0 +1,85 @@
+body {
+    padding-top: 100px;
+    margin: 0;
+}
+
+.list-items {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    border: 2px solid rgb(217, 216, 216);
+    margin: auto;
+}
+
+.demo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+#three-dots {
+    padding-right: 10px;
+}
+
+form {
+    width: 100%;
+    border: 1px solid rgb(217, 216, 216);
+}
+
+.chromeless-input {
+    height: 60px;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(223, 222, 222);
+    border-top: 1px solid rgb(223, 222, 222);
+    box-sizing: border-box;
+}
+
+::placeholder {
+font-style: italic;
+font-size: 16px;
+}
+
+.list {
+    min-height: 60px;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(223, 222, 222);
+    border-top: 1px solid rgb(223, 222, 222);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 30fr 1fr;
+    font-size: 20px;
+    align-items: center;
+}
+
+.list span {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.link-button {
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-size: 15px;
+}
