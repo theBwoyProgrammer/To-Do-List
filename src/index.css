@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-.booklist {
+.list-items {
     list-style: none;
     width: 100%;
     padding: 0;
@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 60%;
-    border: 3px solid rgb(217, 216, 216);
+    border: 2px solid rgb(217, 216, 216);
     margin: auto;
 }
 
@@ -25,6 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 25px;
     width: 100%;
     padding: 0 10px;
     box-sizing: border-box;
@@ -36,7 +37,7 @@ body {
 
 form {
     width: 100%;
-    border: 2px solid rgb(217, 216, 216);
+    border: 1px solid rgb(217, 216, 216);
 }
 
 .chromeless-input {
@@ -44,9 +45,14 @@ form {
     width: 100%;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid gray;
-    border-top: 1px solid gray;
+    border-bottom: 1px solid rgb(223, 222, 222);
+    border-top: 1px solid rgb(223, 222, 222);
     box-sizing: border-box;
+}
+
+::placeholder {
+font-style: italic;
+font-size: 16px;
 }
 
 .list {
@@ -54,14 +60,14 @@ form {
     width: 100%;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid gray;
-    border-top: 1px solid gray;
+    border-bottom: 1px solid rgb(223, 222, 222);
+    border-top: 1px solid rgb(223, 222, 222);
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 30fr 1fr;
-    font-size: 30px;
+    font-size: 20px;
     align-items: center;
 }
 
