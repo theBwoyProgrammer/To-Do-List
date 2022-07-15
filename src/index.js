@@ -1,57 +1,57 @@
 import './index.css';
-
-const list = [
-{
-    description: 'cook',
-    completed: false,
-    index: 0,
-},
-{
-    description: 'cook',
-    completed: false,
-    index: 0,
-},
-{
-    description: 'cook',
-    completed: false,
-    index: 0,
-},
-{
-    description: 'cook',
-    completed: false,
-    index: 0,
-},
-{
-    description: 'cook',
-    completed: false,
-    index: 0,
-},
-{
-    description: 'cook',
-    completed: false,
-    index: 0,
-},
-];
-
-const unorderedList = document.querySelector('.list-items');
-
-for(let i = 0; i<list.length; i+=1){
-const listMom = document.createElement('li');
-listMom.setAttribute('class', 'list');
-
-const input = document.createElement('input');
-input.setAttribute('contenteditable', false);
-input.setAttribute('type', 'checkbox');
-
-const span = document.createElement('span');
-span.setAttribute('contenteditable', true);
-
-const icon = document.createElement('i');
-icon.setAttribute('class', 'bi bi-three-dots-vertical');
-icon.setAttribute('id', 'three-dots');
-
-span.textContent += list[i].description;
-listMom.append(input, span, icon);
-unorderedList.append(listMom);
+class List {
+    constructor(description, index) {
+      this.description = description;
+      this.completed = false;
+      this.index = index;
+    }
+    static getListItems() {
+        let listItems;
+        if(localStorage.getItem('listItems') === null){
+          listItems = [];
+        } else {
+          listItems = JSON.parse(localStorage.getItem('listItems'));
+        }
+        return listItems;
+    }
+    static addTask(task) {
+        const tasks = this.getListItems();
+        tasks.push(task);
+        localStorage.setItem('listItems', JSON.stringify(tasks))
+    }
+    static showItems(task) {
+        const unorderedList = document.querySelector('#list-items');
+        const div = document.createElement('div');
+        div.setAttribute('draggable', 'true');
+        div.setAttribute('class', 'list');
+    
+        const check = document.createElement('input');
+        check.setAttribute('type', 'checkbox');
+        check.setAttribute('class', 'checkbox');
+    
+        const input = document.createElement('input');
+        input.setAttribute('class', 'input');
+        input.setAttribute('readonly', 'readonly');
+    
+        input.value = `${task.description}`;
+        div.append(check, input);
+        unorderedList.append(div);
+    }
 }
 
+document.querySelector('.input-form').addEventListener('submit',(e)=>{
+e.preventDefault();
+const inputValue =  document.querySelector('#new-item').value;
+const tasks = List.getListItems();
+let list = new List(inputValue, tasks.length + 1);
+List.addTask(list);
+List.showItems(list);
+})
+
+const showAllTasks = () => {
+    const tasks = List.getListItems();
+    tasks.forEach((task) => {
+      List.showTasks(task);
+    });
+  };
+  document.addEventListener('DOMContentLoaded', showAllTasks());
