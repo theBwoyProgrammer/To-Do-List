@@ -30,9 +30,6 @@
 //   input.setAttribute('class', 'input');
 //   // input.setAttribute('readonly', 'readonly');
 
-//   const icon = document.createElement('i');
-// icon.setAttribute('class', 'bi bi-three-dots-vertical');
-// icon.setAttribute('id', 'three-dots');
 
 
 // input.value = newInput;
