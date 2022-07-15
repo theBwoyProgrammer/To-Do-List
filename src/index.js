@@ -17,7 +17,9 @@ class List {
     static addTask(task) {
         const tasks = this.getListItems();
         tasks.push(task);
-        localStorage.setItem('listItems', JSON.stringify(tasks))
+        localStorage.setItem('listItems', JSON.stringify(tasks));
+        const inputValue =  document.querySelector('#new-item');
+        inputValue.value = '';
     }
     static showItems(task) {
         const unorderedList = document.querySelector('#list-items');
@@ -51,7 +53,7 @@ List.showItems(list);
 const showAllTasks = () => {
     const tasks = List.getListItems();
     tasks.forEach((task) => {
-      List.showTasks(task);
+        List.showItems(task);
     });
-  };
-  document.addEventListener('DOMContentLoaded', showAllTasks());
+};
+document.addEventListener('DOMContentLoaded', showAllTasks);
