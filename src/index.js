@@ -14,7 +14,3 @@ textInput.addEventListener('keypress', (e) => {
 });
 
 window.addEventListener('load', taskstore.displayTask);
-
-
-
-
