@@ -1,3 +1,9 @@
+class TodoList {
+  constructor() {
+    this.tasks 
+  }
+}
+
 // class List {
 //   constructor(description, index) {
 //     this.description = description;
