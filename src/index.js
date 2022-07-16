@@ -1,5 +1,5 @@
 import './index.css';
-import TodoList from './modules/dev';
+import TodoList from './modules/dev.js';
 
 const taskstore = new TodoList();
 
