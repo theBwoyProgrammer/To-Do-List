@@ -37,12 +37,26 @@ class List {
 
     const icon = document.createElement('i');
     icon.setAttribute('class', 'bi bi-three-dots-vertical');
-    icon.setAttribute('id', 'three-dots');
+
+    icon.addEventListener('click', () => {
+      if (!icon.classList.contains('bi-trash')) {
+        icon.classList.add('bi-trash');
+
+        const trash = document.querySelectorAll('.bi-trash');
+        trash.forEach((tr) => {
+          tr.addEventListener('click', () => {
+            icon.parentElement.style.display = 'none';
+            List.remove(icon);
+          });
+        });
+      }});
 
     input.value = `${task.description}`;
     div.append(check, input, icon);
     unorderedList.append(div);
   }
+
+  
 }
 
 document.querySelector('.input-form').addEventListener('submit', (e) => {
@@ -62,20 +76,3 @@ const showAllTasks = () => {
 };
 document.addEventListener('DOMContentLoaded', showAllTasks);
 
-
-// const removeBtn = document.createElement('button');
-//   removeBtn.setAttribute('type', 'button');
-//   removeBtn.id = `remove-book-${book.id}`;
-//   removeBtn.classList.add('btn', 'btn-remove', 'clickeable');
-//   removeBtn.innerHTML = 'Remove';
-
-//   removeBtn.addEventListener('click', () => {
-//     const targetBook = new Book();
-//     targetBook.removeBook(book.id);
-//     removeBtn.parentElement.remove();
-//   });
-
-//   bookHTML.appendChild(removeBtn);
-
-//   return bookHTML;
-// };
