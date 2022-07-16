@@ -1,6 +1,45 @@
 class TodoList {
   constructor() {
-    this.tasks 
+    this.list = JSON.parse(localStorage.getItem('taskstore')) || [];
+  }
+
+  addTask = (item) => {
+    this.list.push({ description: item, completed: false, index: this.list.length + 1});
+    this.populateLocalStorage();
+    this.displayTask();
+  }
+
+  removeTask = (index) => {
+    this.list = this.list.filter((task) => task.index !== index);
+    this.updateIndex();
+    this.populateLocalStorage();
+    this.displayTask();
+  }
+
+  updateIndex = () => {
+    this.list = this.list.map((task, index) => {
+      task.index = index + 1;
+      return task;
+    });
+  }
+
+  displayTask = () => {
+    const todoList = document.querySelector('.list-items');
+    todoList.innerHTML = '';
+    for (let i = 0; i < this.list.length; i += 1) {
+      todoList.innerHTML += `
+        <div class="list">
+          <div>
+            <input type="checkbox" name="" id="${i}">
+            <p>{this.list[i].description</p>
+          </div>
+          <div class="icon">
+            <i class="bi bi-three-dots-vertical"></i>
+            <i class="bi bi-trash d-none" date-index=${i + 1}></i>
+          </div>
+        </div>
+      `
+    }
   }
 }
 
