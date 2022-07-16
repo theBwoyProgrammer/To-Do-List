@@ -16,4 +16,6 @@ textInput.addEventListener('keypress', (e) => {
 
 window.addEventListener('load', taskstore.displayTask);
 
+
 clearAll.addEventListener('click', () => { cleartodos(taskstore); });
+
