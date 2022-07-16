@@ -4,7 +4,7 @@ class TodoList {
   }
 
   addTask = (item) => {
-    this.list.push({ description: item, completed: false, index: this.list.length + 1});
+    this.list.push({ description: item, completed: false, index: this.list.length + 1 });
     this.populateLocalStorage();
     this.displayTask();
   }
@@ -29,19 +29,19 @@ class TodoList {
     for (let i = 0; i < this.list.length; i += 1) {
       todoList.innerHTML += `
         <div class="list">
-          <div>
+          <div class="input">
             <input type="checkbox" name="" id="${i}">
-            <p>{this.list[i].description</p>
+            <p>${this.list[i].description}</p>
           </div>
           <div class="icon">
             <i class="bi bi-three-dots-vertical"></i>
-            <i class="bi bi-trash d-none" date-index=${i + 1}></i>
+            <i class="bi bi-trash d-none" data-index=${i + 1}></i>
           </div>
         </div>
       `;
     }
     const deleteBtn = document.querySelectorAll('.bi-trash');
-    deleteBtn.forEach((button) =>{
+    deleteBtn.forEach((button) => {
       button.addEventListener('click', (event) => {
         const id = parseInt(event.target.getAttribute('data-index'), 10);
         this.removeTask(id);
@@ -72,7 +72,7 @@ class TodoList {
   }
 }
 
-export default TodoList
+export default TodoList;
 
 // class List {
 //   constructor(description, index) {
@@ -88,9 +88,9 @@ export default TodoList
 
 // // document.addEventListener('DOMContentLoaded', () => {
 
-  // const unorderedList = document.querySelector('#list-items');
-  // document.querySelector('form').addEventListener('click',(e)=>{
-  // e.preventDefault();
+// const unorderedList = document.querySelector('#list-items');
+// document.querySelector('form').addEventListener('click',(e)=>{
+// e.preventDefault();
 
 //   let newInput = new List(listInput.value, listItems.length + 1);
 
@@ -106,8 +106,6 @@ export default TodoList
 //   input.setAttribute('class', 'input');
 //   // input.setAttribute('readonly', 'readonly');
 
-
-
 // input.value = newInput;
 // listMom.append(check, input, icon);
 // unorderedList.append(listMom);
@@ -116,21 +114,20 @@ export default TodoList
 // listItems.push(input);
 // localStorage.setItem('listItems', JSON.stringify(listItems))
 // })
- 
 
-  // const getListItems = () => {
-  //   let listItems;
-  //   if(localStorage.getItem('listItems') === null){
-  //     listItems = [];
-  //   } else { listItems = JSON.parse(localStorage.getItem('listItems'));
-  //   }
-  //   return listItems;
+// const getListItems = () => {
+//   let listItems;
+//   if(localStorage.getItem('listItems') === null){
+//     listItems = [];
+//   } else { listItems = JSON.parse(localStorage.getItem('listItems'));
+//   }
+//   return listItems;
 //     // const setTask = (task) => {
 //     //   const listItems = getListItems()
 //     //   listItems.push(task);
 //     //   localStorage.setItem('listItems', JSON.stringify(listItems));
 //     // }
-    
+
 //   }
 //     // if (JSON.parse(localStorage.getItem('list-items')) === null) {
 //     //   listItems.push(listInput);
@@ -140,6 +137,3 @@ export default TodoList
 //     //   newlistItems.push(listInput);
 //     //   localStorage.setItem('list-items', JSON.stringify(newlistItems));
 //     // }
-  
-
-

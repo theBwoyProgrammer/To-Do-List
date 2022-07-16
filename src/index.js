@@ -1,5 +1,5 @@
 import './index.css';
-import TodoList from './modules/dev.js';
+import TodoList from './modules/dev';
 
 const taskstore = new TodoList();
 
@@ -14,9 +14,6 @@ textInput.addEventListener('keypress', (e) => {
 });
 
 window.addEventListener('load', taskstore.displayTask);
-
-
-
 
 // import './index.css';
 // class List {
@@ -85,7 +82,6 @@ window.addEventListener('load', taskstore.displayTask);
 //     unorderedList.append(div);
 //   }
 
-  
 // }
 
 // document.querySelector('.input-form').addEventListener('submit', (e) => {
@@ -104,4 +100,3 @@ window.addEventListener('load', taskstore.displayTask);
 //   });
 // };
 // document.addEventListener('DOMContentLoaded', showAllTasks);
-
