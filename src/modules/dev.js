@@ -58,6 +58,7 @@ class TodoList {
         trash.classList.toggle('d-none');
         dots.classList.toggle('d-none');
         this.markCompleted(parseInt(event.target.id, 10));
+        window.addEventListener('load', this.removeTask);
       });
     });
   }
@@ -71,5 +72,4 @@ class TodoList {
     localStorage.setItem('taskstore', JSON.stringify(this.list));
   }
 }
-
 export default TodoList;
