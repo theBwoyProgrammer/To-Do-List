@@ -38,10 +38,41 @@ class TodoList {
             <i class="bi bi-trash d-none" date-index=${i + 1}></i>
           </div>
         </div>
-      `
+      `;
     }
+    const deleteBtn = document.querySelectorAll('.bi-trash');
+    deleteBtn.forEach((button) =>{
+      button.addEventListener('click', (event) => {
+        const id = parseInt(event.target.getAttribute('data-index'), 10);
+        this.removeTask(id);
+      });
+    });
+
+    const checkboxes = document.querySelectorAll('input[type=checkbox]');
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', (event) => {
+        const inputField = event.target.parentNode.querySelector('p');
+        const dots = event.target.parentNode.parentNode.querySelector('.bi-three-dots-vertical');
+        const trash = event.target.parentNode.parentNode.querySelector('.bi-trash');
+        inputField.classList.toggle('line-through');
+        trash.classList.toggle('d-none');
+        dots.classList.toggle('d-none');
+        this.markCompleted(parseInt(event.target.id, 10));
+      });
+    });
+  }
+
+  markCompleted = (index) => {
+    this.list[index].completed = !this.list[index].completed;
+    this.populateLocalStorage();
+  }
+
+  populateLocalStorage = () => {
+    localStorage.setItem('taskstore', JSON.stringify(this.list));
   }
 }
+
+export default TodoList
 
 // class List {
 //   constructor(description, index) {
