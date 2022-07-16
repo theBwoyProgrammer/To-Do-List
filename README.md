@@ -14,6 +14,24 @@ In this feature, I built a to do list app which helps to list the tasks to be do
 - Frameworks-N/A
 - Technologies used- VSCode, Git, Github.
 
+## Getting Started
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+### Setup
+- You can download the file directly by downloading as a zip file directly from github.
+- Alternatively, you can clone the repository by running the git clone command.
+
+
+### Install
+
+### Usage
+
+### Run tests
+
+### Deployment
+
 ## Authors
 
 👤 **Hatim Eddinani**
