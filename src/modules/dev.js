@@ -31,7 +31,7 @@ class TodoList {
         <div class="list">
           <div class="input">
             <input type="checkbox" name="" id="${i}">
-            <p>${this.list[i].description}</p>
+            <p contenteditable="true">${this.list[i].description}</p>
           </div>
           <div class="icon">
             <i class="bi bi-three-dots-vertical"></i>
@@ -72,5 +72,6 @@ class TodoList {
     localStorage.setItem('taskstore', JSON.stringify(this.list));
   }
 }
+export default TodoList;
 
 export default TodoList;
