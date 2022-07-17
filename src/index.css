@@ -124,7 +124,7 @@ body {
 }
 
 .bi-arrow-repeat {
-  transition: transform .7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 }
 
 .bi-arrow-repeat:hover {
@@ -194,7 +194,7 @@ body {
 }
 
 .li {
-  transition: transform .7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 }
 
 .li:hover {
