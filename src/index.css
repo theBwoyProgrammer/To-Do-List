@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  padding-top: 100px;
+  padding-top: 80px;
   margin: 0;
+  background-image: url(./Assets/try.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(7px);
+  overflow-y: hidden;
 }
 
 .list-items {
@@ -23,6 +30,7 @@ body {
   width: 70%;
   border: 2px solid rgb(217, 216, 216);
   margin: auto;
+  border-radius: 10px;
 }
 
 .d-none {
@@ -41,6 +49,9 @@ body {
   width: 100%;
   padding: 0 10px;
   box-sizing: border-box;
+  color: rgb(71, 70, 70);
+  background-color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .bi-three-dots-vertical {
@@ -82,6 +93,7 @@ body {
 
 #myAddBtn {
   height: 100%;
+  background-color: white;
 }
 
 .input {
@@ -89,6 +101,7 @@ body {
   align-items: center;
   font-size: medium;
   font-style: oblique;
+  font-family: 'Alfa Slab One', cursive;
   padding-left: 15px;
   color: rgb(97, 97, 97);
   border: 1px solid rgb(217, 216, 216);
@@ -97,6 +110,8 @@ body {
   border-left: none;
   border-right: none;
   box-sizing: border-box;
+  background-color: white;
+  cursor: pointer;
 }
 
 .input p {
@@ -106,6 +121,14 @@ body {
 ::placeholder {
   font-style: italic;
   font-size: 16px;
+}
+
+.bi-arrow-repeat {
+  transition: transform .7s ease-in-out;
+}
+
+.bi-arrow-repeat:hover {
+  transform: rotate(360deg);
 }
 
 .list {
@@ -121,7 +144,8 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 20px;
+  font-size: 30px;
+  background-color: white;
 }
 
 .items {
@@ -137,4 +161,46 @@ body {
   height: 60px;
   border: none;
   font-size: 15px;
+  font-family: 'Alfa Slab One', cursive;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  color: rgb(41, 35, 35);
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  border: whitesmoke 2px solid;
+  border-radius: 10px;
+  width: 60%;
+  background-color: cornsilk;
+  margin-left: 270px;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.footer-p {
+  padding-left: 20px;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.li {
+  transition: transform .7s ease-in-out;
+}
+
+.li:hover {
+  transform: rotate(360deg);
+}
+
+.social-list li a {
+  color: black;
 }
