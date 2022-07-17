@@ -29,9 +29,9 @@ class TodoList {
     for (let i = 0; i < this.list.length; i += 1) {
       todoList.innerHTML += `
         <div class="list">
-          <div class="input">
+          <div class="input" completed= ${this.list[i].completed}>
             <input type="checkbox" name="" id="${i}">
-            <p contenteditable="true">${this.list[i].description}</p>
+            <p contenteditable="true" completed= ${this.list[i].completed} >${this.list[i].description}</p>
           </div>
           <div class="icon">
             <i class="bi bi-three-dots-vertical"></i>
@@ -50,6 +50,7 @@ class TodoList {
 
     const checkboxes = document.querySelectorAll('input[type=checkbox]');
     checkboxes.forEach((checkbox) => {
+      // window.addEventListener('load', this.removeTask);
       checkbox.addEventListener('change', (event) => {
         const inputField = event.target.parentNode.querySelector('p');
         const dots = event.target.parentNode.parentNode.querySelector('.bi-three-dots-vertical');
@@ -58,7 +59,6 @@ class TodoList {
         trash.classList.toggle('d-none');
         dots.classList.toggle('d-none');
         this.markCompleted(parseInt(event.target.id, 10));
-        window.addEventListener('load', this.removeTask);
       });
     });
   }
