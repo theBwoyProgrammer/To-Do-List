@@ -4,6 +4,8 @@
 
 > To-Do App
 
+[Live Demo](https://hatimdev-he.github.io/To-Do-List/)
+
 ## About Project
 
 In this feature, I built a to do list app which helps to list the tasks to be done at a particular time. One can check the done ones and deleted them too.
@@ -12,7 +14,7 @@ In this feature, I built a to do list app which helps to list the tasks to be do
 
 - Major languages-HTML&CSS/JS
 - Frameworks-N/A
-- Technologies used- VSCode, Git, Github.
+- Technologies used- VSCode, Git, Github, Webpack, Bash, npm.
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
