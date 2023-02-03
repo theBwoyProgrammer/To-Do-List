@@ -204,3 +204,8 @@ body {
 .social-list li a {
   color: black;
 }
+
+
+@media only screen and (max-width: 600px) {
+  
+}

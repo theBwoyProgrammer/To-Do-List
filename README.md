@@ -1,53 +1,161 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a name="readme-top"></a>
 
-# Project Name
+<div align="center">
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <img src="public/icons/mylogo.png" alt="logo" width="480"  height="auto" />
+  <br/>
 
-> To-Do App
+  <h3><b>To-Do App README</b></h3>
 
-[Live Demo](https://hatimdev-he.github.io/To-Do-List/)
+</div>
 
-## About Project
+<!-- TABLE OF CONTENTS -->
 
-In this feature, I built a to do list app which helps to list the tasks to be done at a particular time. One can check the done ones and deleted them too.
+# 📗 Table of Contents
 
-## Built With
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
+- [📝 License](#license)
 
-- Major languages-HTML&CSS/JS
-- Frameworks-N/A
-- Technologies used- VSCode, Git, Github, Webpack, Bash, npm.
+<!-- PROJECT DESCRIPTION -->
 
-## Getting Started
-To get a local copy up and running follow these simple example steps.
+# 📖 To-Do App <a name="about-project"></a>
+
+> To-Do List is a simple web based application that allows users to manage their tasks from a smartphone, tablet and computer. This app is built with JavaScript, HTML/CSS.
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://html.com/">HTML</a></li>
+    <li><a href="https://www.w3.org/Style/CSS">CSS</a></li>
+    <li><a href="https://www.javascript.com/">JavaScript</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+> This website allows users to manage their tasks from a smartphone, tablet and computer;
+
+- **A user can add tasks**
+- **A user can mark completed tasks**
+- **A user can delete tasks**
+### NOTE: Use the keyboard ENTER key to add a task
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://thebwoyprogrammer.github.io/To-Do-List/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-### Setup
-- You can download the file directly by downloading as a zip file directly from github.
-- Alternatively, you can clone the repository by running the git clone command.
+In order to run this project you need:
 
-## Authors
+- NodeJS environment
+- Preferred IDE
+- Webpack
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  git clone https://github.com/theBwoyProgrammer/To-Do-List.git
+  cd To-Do-List
+```
+
+### Install
+
+Install this project with:
+
+```sh
+  npm install
+```
+
+### Usage
+
+To run the project, execute;
+
+```sh
+  npm start
+```
+
+### Deployment
+
+You can deploy this project using:
+
+```sh
+   You can deploy the project using vercel or any preferred hosting service provider
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
 
 👤 **Hatim Eddinani**
 
-- GitHub: [@HatimDev-HE](https://github.com/githubhandle)
-- Twitter: [@HatimDev](https://twitter.com/twitterhandle)
+- GitHub: [@theBwoyProgrammer](https://github.com/theBwoyProgrammer)
+- Twitter: [@the_BwoyPrgrmmr](https://twitter.com/the_BwoyPrgrmmr)
+- LinkedIn: [Hatim Eddinani](https://www.linkedin.com/in/hatimdev/)
 
-## 🤝 Contributing
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/theBwoyProgrammer/To-Do-List/issues).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+<!-- SUPPORT -->
 
-## Acknowledgments
+## ⭐️ Show your support <a name="support"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+If you like this project, don't forget to leave a star and follow me for more open source projects
 
-## 📝 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./MIT.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
